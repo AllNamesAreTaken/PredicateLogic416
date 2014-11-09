@@ -1,0 +1,47 @@
+: groups
+- monkey 1
+- actor 1
+- person 1
+- place 1
+- party 1
+- politician 1
+- costars 2 actor monkey
+- govenor 2 person place
+- president 2 person place
+- mayor 2 person place
+- spoke 2 person party
+- 
+: facts
+- monkey Bonzo
+- monkey Clyde
+- actor Ronald_Regan
+- actor Clint_Eastwood
+- actor Kevin_Bacon
+- costars Ronald_Regan Bonzo
+- costars Clint_Eastwood Clyde
+- govenor Ronald_Regan CA
+- govenor George_W._Bush US
+- president George_W._Bush US
+- president Ronald_Regan US
+- mayor Clint_Eastwood Camel
+- spoke Clint_Eastwood Republican
+- spoke Bill_Clinton Democratic
+- place CA
+- party Democratic
+- politician Sonic_Teh_hedghog
+-
+: is
+- govenor 0 = politician 0
+- mayor 0 = politician 0
+- ( costars 0 & actor 0 ) 0 = politician 0
+-
+: isnot
+- Kevin_Bacon != president 0
+-
+: can
+- govenor 0 & actor 0 = president 0
+-
+: cannot
+- monkey 0 != president 0
+-
+:

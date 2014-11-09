@@ -1,0 +1,16 @@
+Define Groups
+	One object lists are fine
+	Multi object lists have to have multiple one object items
+	((person 1) (monkey 1) (actor 1) (costars 2 actor monkey))
+Define Facts
+Define Is
+	& Symbol Properties (Ex: team 1 & leader 0)
+		Left side: 	The side with returns
+		Right side: 	The filter
+		Numbers: Leftside num att must contain Rightside num att
+		Returns list of lists
+Define IsNot
+	Only Used for checking
+Define Can
+Define Cannot
+	Only Used for checking
