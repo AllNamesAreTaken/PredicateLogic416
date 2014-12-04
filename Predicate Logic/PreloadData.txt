@@ -2,14 +2,18 @@
 - monkey 1
 - actor 1
 - person 1
-- place 1
+- town 1
+- state 1
+- country 1
 - party 1
 - politician 1
 - costars 2 actor monkey
-- govenor 2 person place
-- president 2 person place
-- mayor 2 person place
+- govenor 2 person state
+- president 2 person country
+- mayor 2 person town
 - spoke 2 person party
+- spec 3 person monkey town
+- spec2 5 person politician country state town
 - 
 : facts
 - monkey Bonzo
@@ -20,28 +24,34 @@
 - costars Ronald_Regan Bonzo
 - costars Clint_Eastwood Clyde
 - govenor Ronald_Regan CA
-- govenor George_W._Bush US
+- govenor George_W._Bush TX
 - president George_W._Bush US
 - president Ronald_Regan US
 - mayor Clint_Eastwood Camel
 - spoke Clint_Eastwood Republican
 - spoke Bill_Clinton Democratic
-- place CA
 - party Democratic
 - politician Sonic_Teh_hedghog
+- person William
+- spec Wihan Goll TehTown
+- spec Wihan2 Goll2 TehTown2
+- spec2 Spec2Person Spec2politician Spec2country Spec2state Spec2town
 -
 : is
-- govenor 0 = politician 0
-- mayor 0 = politician 0
-- ( costars 0 & actor 0 ) 0 = politician 0
+- politician (govenor 0)
+- politician (mayor 0)
+- politician ((costars 0) and (actor 0))
+- costars (politicians 0) ((Bonzo Bingo))
+- costars ((Willc)) ((Gokuc))
+- mayor (politicians 0) (town 0)
 -
 : isnot
-- Kevin_Bacon != president 0
+- president ((Kevin_Bacon))
 -
 : can
-- govenor 0 & actor 0 = president 0
+- president (govenor 0 and actor 0)
 -
 : cannot
-- monkey 0 != president 0
+- president (monkey 0)
 -
 :
